@@ -1,0 +1,28 @@
+<h1>WORD COUNT</h1>
+<a href="{% url 'about' %}">About</a>
+<br>
+<a href="{% url 'home' %}">Home</a>
+
+<h2> Your Text: </h2>
+{{fulltext}}
+<!-- displays the value from the python dict fulltext--!>
+<br>
+<!-- linebreak --!>
+
+<h2> There are {{ word_count }} words in your text </h2>
+<!-- displays the word count using the value from the word_count dict --!>
+
+  {% for words, total in sorted_words %}
+  <!-- Starts for loop, fr --!>
+
+    {{words}} : {{total}}
+    <br>
+
+
+  {% endfor %}
+
+<br>
+
+<a href="{% url 'about' %}">About</a>
+<br>
+<a href="{% url 'home' %}">Home</a>
